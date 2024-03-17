@@ -77,13 +77,13 @@ buttons.forEach(button => {
                 operatorPressed = false;
             }
             display.textContent += (e.target.textContent);
-        } else if (e.target.className === ".") { // adding decimal function
-            if (display.textContent.includes(".")) {
-                document.getElementsByClassName(".").disabled = true;
+        } else if (e.target.className === "dec") { // adding decimal function
+            if (display.textContent.includes("dec")) {
+                document.getElementsByClassName("dec").disabled = true;
             } else {
                 display.textContent += (e.target.textContent);
             }
-        } else if (e.target.className === "+/-") { //+/- button function 
+        } else if (e.target.className === "plusMinus") { //+/- button function 
             if (operatorPressed) {
                 display.textContent = "";
                 operatorPressed = false; // have to add so pressing number doesnt clear screen again 
@@ -98,7 +98,7 @@ buttons.forEach(button => {
                 operatorPressed = false;
             }
             
-        } else if (e.target.className === "%") {
+        } else if (e.target.className === "percent") {
             display.textContent = display.textContent * .01
         }
     });
